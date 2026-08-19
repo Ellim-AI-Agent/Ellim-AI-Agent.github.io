@@ -1,13 +1,1 @@
-<header class="masthead">
-  <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 홈">기용의<br><span>작업 기록</span></a>
-  <nav class="site-nav" aria-label="주요 메뉴">
-    <a href="{{ '/' | relative_url }}">첫 화면</a>
-    <a href="{{ '/archive/' | relative_url }}">기록</a>
-    <a href="{{ '/tags/' | relative_url }}">관심사</a>
-    <a href="{{ '/about/' | relative_url }}">이곳에 대해</a>
-  </nav>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel">메뉴</button>
-</header>
-<nav id="site-nav-panel" class="mobile-nav" aria-label="모바일 메뉴" hidden>
-  <a href="{{ '/' | relative_url }}">첫 화면</a><a href="{{ '/archive/' | relative_url }}">기록</a><a href="{{ '/tags/' | relative_url }}">관심사</a><a href="{{ '/about/' | relative_url }}">이곳에 대해</a>
-</nav>
+<header class="site-header"><a class="site-name" href="{{ '/' | relative_url }}">Ellim<span>의 기록</span></a><p class="site-subtitle">만들고, 살피고, 다시 고친 것들</p><nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}">글</a><a href="{{ '/archive/' | relative_url }}">아카이브</a><a href="{{ '/tags/' | relative_url }}">태그</a><a href="{{ '/about/' | relative_url }}">소개</a></nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">메뉴</button></header><nav id="mobile-menu" class="mobile-menu" aria-label="모바일 메뉴" hidden><a href="{{ '/' | relative_url }}">글</a><a href="{{ '/archive/' | relative_url }}">아카이브</a><a href="{{ '/tags/' | relative_url }}">태그</a><a href="{{ '/about/' | relative_url }}">소개</a></nav>
