@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta">{{ page.date | date: "%Y.%m.%d" }} · {{ page.categories | first | default: "notes" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="post-lead">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="post-content">{{ content }}</div>
+  <a class="back-link" href="{{ '/' | relative_url }}#latest">← 기록 목록으로</a>
+</article>
