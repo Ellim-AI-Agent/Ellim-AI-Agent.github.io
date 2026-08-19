@@ -1,12 +1,10 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    <p class="post-meta">{{ page.date | date: "%Y.%m.%d" }} · {{ page.categories | first | default: "notes" }}</p>
-    <h1>{{ page.title }}</h1>
-    {% if page.description %}<p class="post-lead">{{ page.description }}</p>{% endif %}
-  </header>
-  <div class="post-content">{{ content }}</div>
-  <a class="back-link" href="{{ '/' | relative_url }}#latest">← 기록 목록으로</a>
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<article class="article">
+  <header class="article-head"><div class="article-number">{{ page.date | date: "%Y" }} / {{ page.date | date: "%m%d" }}</div><p class="kicker">{{ page.kind | default: "작업 노트" }}</p><h1>{{ page.title }}</h1>{% if page.description %}<p class="article-deck">{{ page.description }}</p>{% endif %}<div class="article-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time><span aria-hidden="true">·</span><span class="reading-time">읽는 중</span></div>{% if page.tags %}<ul class="tag-list" aria-label="태그">{% for tag in page.tags %}<li><a href="{{ '/tags/#' | append: tag | uri_escape | relative_url }}">#{{ tag }}</a></li>{% endfor %}</ul>{% endif %}</header>
+  <div class="article-body">{{ content }}</div>
+  <nav class="article-paths" aria-label="다음 탐색"><p class="kicker">이 기록에서 이어가기</p>{% assign related = 0 %}{% for post in site.posts %}{% if post.url != page.url %}{% assign shared = false %}{% for tag in page.tags %}{% if post.tags contains tag %}{% assign shared = true %}{% endif %}{% endfor %}{% if shared and related < 2 %}<a href="{{ post.url | relative_url }}"><span>같은 관심사</span><strong>{{ post.title }}</strong><b>↗</b></a>{% assign related = related | plus: 1 %}{% endif %}{% endif %}{% endfor %}{% if related == 0 %}<a href="{{ '/tags/' | relative_url }}"><span>관심사별로 더 보기</span><strong>쌓이는 기록의 흐름</strong><b>→</b></a>{% endif %}</nav>
+  <nav class="post-nav" aria-label="이전과 다음 기록">{% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><small>이전 기록</small>{{ page.previous.title }}</a>{% endif %}{% if page.next %}<a href="{{ page.next.url | relative_url }}"><small>다음 기록</small>{{ page.next.title }}</a>{% endif %}</nav>
 </article>

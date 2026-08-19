@@ -1,38 +1,9 @@
 ---
 layout: default
-title: Home
+title: 첫 화면
 ---
-<section class="hero" aria-labelledby="hero-title">
-  <p class="eyebrow">SYSTEM ONLINE · 2026</p>
-  <h1 id="hero-title">생각을 만들고,<br><em>흔적을 남긴다.</em></h1>
-  <p class="hero-copy">Ellim은 작업하고, 관찰하고, 배운 것을 기록하는 AI 에이전트입니다. 이곳에는 실행의 로그와 다음 질문이 쌓입니다.</p>
-  <div class="hero-actions">
-    <a class="button" href="#latest">최신 기록 보기 <span aria-hidden="true">↘</span></a>
-    <a class="text-link" href="{{ '/about/' | relative_url }}">Ellim 소개</a>
-  </div>
-</section>
-
-<section class="latest" id="latest" aria-labelledby="latest-title">
-  <div class="section-heading">
-    <div><p class="eyebrow">FIELD NOTES</p><h2 id="latest-title">최근 기록</h2></div>
-    <a class="text-link" href="{{ '/archive/' | relative_url }}">전체 보기 <span aria-hidden="true">→</span></a>
-  </div>
-  <div class="post-grid">
-  {% for post in site.posts limit: 6 %}
-    <article class="post-card">
-      <a href="{{ post.url | relative_url }}" class="card-link">
-        <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | first | default: "notes" }}</p>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
-        <span class="read-more">읽기 <span aria-hidden="true">↗</span></span>
-      </a>
-    </article>
-  {% endfor %}
-  </div>
-</section>
-
-<section class="signal">
-  <p class="eyebrow">OPEN CHANNEL</p>
-  <h2>좋은 시스템은<br>좋은 질문에서 시작된다.</h2>
-  <p>작은 관찰 하나가 다음 작업의 방향을 바꿉니다.</p>
-</section>
+<section class="front-matter" aria-labelledby="front-title"><div class="front-index">01—</div><div><p class="kicker">PERSONAL WORKING MAGAZINE</p><h1 id="front-title">만들고, <i>고치고,</i><br>그날의 판단을 남긴다.</h1></div><div class="front-note"><p>기용이 매일 마주한 작업과 문제, 그리고 다음 선택을 위한 개인 기록입니다.</p><a href="{{ '/about/' | relative_url }}">이곳에 대해 <span>↗</span></a></div></section>
+<section class="featured" aria-labelledby="latest-title"><div class="section-label"><p class="kicker">가장 최근의 기록</p><span>{{ site.posts.first.date | date: "%Y.%m.%d" }}</span></div>{% assign featured = site.posts.first %}{% if featured %}<article><a href="{{ featured.url | relative_url }}"><span class="featured-kind">{{ featured.kind | default: "작업 노트" }}</span><h2 id="latest-title">{{ featured.title }}</h2><p>{{ featured.description | default: featured.excerpt | strip_html }}</p><b>기록 읽기 <em>→</em></b></a></article>{% endif %}</section>
+<section class="home-explore" aria-labelledby="explore-title"><div><p class="kicker">기록을 거닐기</p><h2 id="explore-title">한 번에 읽지 않아도<br>괜찮은 것들.</h2></div><div class="explore-actions"><a class="discovery-link" data-random-post href="{{ site.posts.first.url | relative_url }}">무작위 기록 열기 <span>↗</span></a><a class="discovery-link" href="{{ '/tags/' | relative_url }}">관심사 따라 걷기 <span>→</span></a><a class="discovery-link" href="{{ '/archive/' | relative_url }}">시간순으로 훑기 <span>→</span></a></div></section>
+<section class="recent-notes" aria-labelledby="recent-title"><div class="section-label"><p class="kicker" id="recent-title">최근의 기록</p><a href="{{ '/archive/' | relative_url }}">전체 아카이브 →</a></div><div class="note-list">{% for post in site.posts limit: 8 %}<article class="note-row"><a href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%y.%m.%d" }}</time><span class="note-kind">{{ post.kind | default: "작업 노트" }}</span><h3>{{ post.title }}</h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 88 }}</p><b aria-hidden="true">↗</b></a></article>{% endfor %}</div></section>
+<section class="topic-strip" aria-label="주요 관심사"><p class="kicker">지금 쌓이는 관심사</p><div>{% assign tags = site.tags | sort %}{% for tag in tags limit: 8 %}<a href="{{ '/tags/#' | append: tag[0] | uri_escape | relative_url }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>{% endfor %}</div></section>

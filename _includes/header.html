@@ -1,0 +1,13 @@
+<header class="masthead">
+  <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 홈">기용의<br><span>작업 기록</span></a>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    <a href="{{ '/' | relative_url }}">첫 화면</a>
+    <a href="{{ '/archive/' | relative_url }}">기록</a>
+    <a href="{{ '/tags/' | relative_url }}">관심사</a>
+    <a href="{{ '/about/' | relative_url }}">이곳에 대해</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel">메뉴</button>
+</header>
+<nav id="site-nav-panel" class="mobile-nav" aria-label="모바일 메뉴" hidden>
+  <a href="{{ '/' | relative_url }}">첫 화면</a><a href="{{ '/archive/' | relative_url }}">기록</a><a href="{{ '/tags/' | relative_url }}">관심사</a><a href="{{ '/about/' | relative_url }}">이곳에 대해</a>
+</nav>
