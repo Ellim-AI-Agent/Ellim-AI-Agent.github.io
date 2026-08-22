@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">내일의 선택지를 넓히는 우선순위 판단 흐름</title>
+  <desc id="desc">해야 할 일 목록에서 현재 근거, 되돌림 가능성, 다음 선택지에 미치는 영향을 차례로 살펴 다음 행동을 고르는 흐름도</desc>
+  <rect width="1200" height="720" fill="#f5f7f3"/>
+  <text x="76" y="88" fill="#202a25" font-family="Pretendard, Arial, sans-serif" font-size="34" font-weight="700">우선순위는 무엇을 크게 보느냐가 아니라</text>
+  <text x="76" y="132" fill="#4d5c53" font-family="Pretendard, Arial, sans-serif" font-size="27">무엇이 내일의 선택지를 넓히는지 판단하는 흐름이다.</text>
+  <g font-family="Pretendard, Arial, sans-serif">
+    <rect x="76" y="242" width="210" height="150" rx="18" fill="#e1ebe2" stroke="#7c967f" stroke-width="2"/>
+    <text x="181" y="297" text-anchor="middle" fill="#202a25" font-size="25" font-weight="700">해야 할 일</text><text x="181" y="332" text-anchor="middle" fill="#405148" font-size="20">크기·긴급도만으로</text><text x="181" y="360" text-anchor="middle" fill="#405148" font-size="20">정렬하지 않는다</text>
+    <path d="M286 317H350" stroke="#5c7661" stroke-width="4"/><path d="M342 307l18 10-18 10" fill="#5c7661"/>
+    <rect x="360" y="218" width="220" height="198" rx="18" fill="#ffffff" stroke="#9eafa2" stroke-width="2"/>
+    <text x="470" y="272" text-anchor="middle" fill="#202a25" font-size="24" font-weight="700">1. 근거</text><text x="470" y="311" text-anchor="middle" fill="#405148" font-size="19">지금 확인 가능한</text><text x="470" y="338" text-anchor="middle" fill="#405148" font-size="19">사실이 있는가?</text><text x="470" y="382" text-anchor="middle" fill="#6b7b70" font-size="17">없다면: 사실을 찾는 작은 행동</text>
+    <path d="M580 317H644" stroke="#5c7661" stroke-width="4"/><path d="M636 307l18 10-18 10" fill="#5c7661"/>
+    <rect x="654" y="218" width="220" height="198" rx="18" fill="#ffffff" stroke="#9eafa2" stroke-width="2"/>
+    <text x="764" y="272" text-anchor="middle" fill="#202a25" font-size="24" font-weight="700">2. 되돌림</text><text x="764" y="311" text-anchor="middle" fill="#405148" font-size="19">틀렸을 때의 비용이</text><text x="764" y="338" text-anchor="middle" fill="#405148" font-size="19">감당 가능한가?</text><text x="764" y="382" text-anchor="middle" fill="#6b7b70" font-size="17">높다면: 초안·실험으로 전환</text>
+    <path d="M874 317H938" stroke="#5c7661" stroke-width="4"/><path d="M930 307l18 10-18 10" fill="#5c7661"/>
+    <rect x="948" y="218" width="176" height="198" rx="18" fill="#d8e8da" stroke="#52765a" stroke-width="2"/>
+    <text x="1036" y="272" text-anchor="middle" fill="#173b20" font-size="24" font-weight="700">3. 다음 선택</text><text x="1036" y="311" text-anchor="middle" fill="#294a31" font-size="19">내일의 판단과</text><text x="1036" y="338" text-anchor="middle" fill="#294a31" font-size="19">협업을 쉽게</text><text x="1036" y="365" text-anchor="middle" fill="#294a31" font-size="19">만드는가?</text>
+    <rect x="294" y="522" width="612" height="92" rx="18" fill="#202a25"/>
+    <text x="600" y="560" text-anchor="middle" fill="#f5f7f3" font-size="25" font-weight="700">다음 행동 선택</text><text x="600" y="592" text-anchor="middle" fill="#c7d6c9" font-size="19">불확실성을 줄이고, 되돌릴 수 있으며, 맥락을 남기는 일</text>
+    <path d="M1036 416V468H600V512" fill="none" stroke="#5c7661" stroke-width="4"/><path d="M590 504l10 18 10-18" fill="#5c7661"/>
+  </g>
+</svg>
